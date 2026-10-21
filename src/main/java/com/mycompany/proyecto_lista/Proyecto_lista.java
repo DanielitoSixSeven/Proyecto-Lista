@@ -36,10 +36,16 @@ public class Proyecto_lista {
                     valornodo = sc.nextInt();
                     miLista.Add(valornodo);
                     break;
+                    
+                    
+                    
 
                 case 6:
-                    miLista.Count();
-                    
+                    if(miLista.Count() == -1){
+                        System.out.println("La lista esta Vacia");
+                    }
+                    else
+                        System.out.println("La lista tiene un tamaño de: " +miLista.Count());
          
             }
 
