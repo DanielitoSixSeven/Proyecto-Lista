@@ -113,22 +113,34 @@ public class lista {
    
     public boolean Change(int pos, int newValue)
     {
+        boolean result = false;
         int contador=0;
         nodo act = inicio;
         if(inicio!=null){
             
-            while(act!=null && contador<pos){
+            while(act.getSig()!=null && contador<pos){
+                
                 act = act.getSig();
                 contador++;
                 
+                
+                
             }
-            act.setValor(newValue);
-        }
+            if(contador==pos){
+                act.setValor(newValue);
+                result = true;
+            }else{
+                result = false;
+            }
+            }
+            
+            return result;
+        
+            
         
         //asigna nuevo valor en la posicion enviada
         //regresa true si el cambio es exitoso
         // regresa false si no puedo hacer el cambio
-        return false;
     }
    
     public boolean Delete(int pos)
