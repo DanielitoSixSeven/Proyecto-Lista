@@ -59,14 +59,7 @@ public class lista {
         }
         else{
             return -1;
-        }
-        
-        
-        // regresa cuantos nodos tiene la lista
-        // y si esta vacia regresa -1
-       
-        // mostrar la lista esta vacia
-        
+        } 
     }
    
     public int Find(int pos)
@@ -89,19 +82,35 @@ public class lista {
         
         return valor;
     }
-    // regresa el valor que esta en la posicion
-        // comenzando con 0
-        // si no esta la posicion regresa -1
+  
         
     
    
    
     public int FindValue(int v)
     {
+        int posicion=0;
+        nodo act = inicio;
+        if(inicio != null){
+            
+            while(act!=null && act.getValor()!=v ){
+                act = act.getSig();
+                posicion++;
+            }
+            if(act==null)
+                return -1;
+            else
+             return posicion;
+            
+            
+        }
+        else
+            return -1;
+        
         //se envia el posible valor y regresa en que posicion
         // de la lisata esta
         // si no encuenta el valor regresara -1
-        return -1;
+        
     }
    
     public boolean Change(int pos, int newValue)

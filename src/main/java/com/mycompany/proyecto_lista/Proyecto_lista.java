@@ -15,6 +15,7 @@ public class Proyecto_lista {
         int opcion;
         Scanner sc = new Scanner(System.in);
         lista miLista = new lista();
+        int v;
 
         do {
             System.out.println("1. Insertar nodo ");
@@ -36,17 +37,26 @@ public class Proyecto_lista {
                     valornodo = sc.nextInt();
                     miLista.Add(valornodo);
                     break;
+
+                case 2:
                     
+                    System.out.println("dame el valor del nodo a encontrar");
+                    v = sc.nextInt();
+                    miLista.FindValue(v);
+
+                case 4:
                     
-                    
+                    System.out.println("Ingresa la posición del nodo y te diré su valor");
+                    v = sc.nextInt();
+                    miLista.Find(v);
 
                 case 6:
-                    if(miLista.Count() == -1){
+                    if (miLista.Count() == -1) {
                         System.out.println("La lista esta Vacia");
+                    } else {
+                        System.out.println("La lista tiene un tamaño de: " + miLista.Count());
                     }
-                    else
-                        System.out.println("La lista tiene un tamaño de: " +miLista.Count());
-         
+
             }
 
         } while (opcion != 8);
