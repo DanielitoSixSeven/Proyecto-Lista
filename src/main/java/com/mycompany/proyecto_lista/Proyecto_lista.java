@@ -43,6 +43,23 @@ public class Proyecto_lista {
                     System.out.println("dame el valor del nodo a encontrar");
                     v = sc.nextInt();
                     miLista.FindValue(v);
+                    
+                    
+                    
+                case 3:
+                    int pos;
+                    System.out.println("Dame la posicion del nodo");
+                    pos = sc.nextInt();
+                    System.out.println("Dame el nuevo valor del nodo");
+                    v= sc.nextInt();
+                    if(miLista.Change(pos, v) == false){
+                        System.out.println("Cambio fallido");
+                    }
+                   else
+                    {
+                        System.out.println("Cambio realizado con exito");
+                    }
+                    
 
                 case 4:
                     
@@ -51,12 +68,18 @@ public class Proyecto_lista {
                     miLista.Find(v);
 
                 case 6:
-                    if (miLista.Count() == -1) {
+                    if (miLista.Count() >= 0) {
                         System.out.println("La lista esta Vacia");
                     } else {
                         System.out.println("La lista tiene un tamaño de: " + miLista.Count());
                     }
-
+                    
+                    
+                case 7:
+                    if(miLista.Count()<=0)
+                        System.out.println("La lista está vacia");
+                    miLista.Print();
+                    break;
             }
 
         } while (opcion != 8);

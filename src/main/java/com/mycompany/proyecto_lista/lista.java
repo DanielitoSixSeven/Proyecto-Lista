@@ -85,8 +85,6 @@ public class lista {
   
         
     
-   
-   
     public int FindValue(int v)
     {
         int posicion=0;
@@ -115,6 +113,18 @@ public class lista {
    
     public boolean Change(int pos, int newValue)
     {
+        int contador=0;
+        nodo act = inicio;
+        if(inicio!=null){
+            
+            while(act!=null && contador<pos){
+                act = act.getSig();
+                contador++;
+                
+            }
+            act.setValor(newValue);
+        }
+        
         //asigna nuevo valor en la posicion enviada
         //regresa true si el cambio es exitoso
         // regresa false si no puedo hacer el cambio
