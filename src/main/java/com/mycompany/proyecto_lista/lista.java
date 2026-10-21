@@ -47,11 +47,25 @@ public class lista {
     
       public int Count()
     {
+        if(inicio!=null){
+        int contador = 0;
+        nodo act = inicio;
+        
+        while(act!=null){
+        contador++;
+        act = act.getSig();
+        }
+        return contador;
+        }
+        else{
+            return -1;
+        }
+        
         // regresa cuantos nodos tiene la lista
         // y si esta vacia regresa -1
        
         // mostrar la lista esta vacia
-        return -1;
+        
     }
    
     public int Find(int pos)
