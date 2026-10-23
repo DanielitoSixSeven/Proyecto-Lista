@@ -66,6 +66,19 @@ public class Proyecto_lista {
                     System.out.println("Ingresa la posición del nodo y te diré su valor");
                     v = sc.nextInt();
                     miLista.Find(v);
+                    
+                    
+                case 5:
+                    System.out.println("Introduzca la posicion del nodo a borrar");
+                    v=sc.nextInt();
+                    
+                    if(miLista.Delete(v)==false){
+                        System.out.println("No se pudo realizar la eliminacion");
+                        
+                    }else{
+                        System.out.println("Eliminacion exitosa");
+                    }
+                    
 
                 case 6:
                     if (miLista.Count() >= 0) {

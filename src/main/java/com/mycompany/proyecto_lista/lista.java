@@ -141,18 +141,37 @@ public class lista {
         nodo act = inicio;
         nodo ant = inicio;
         
-        if (inicio!=null){
+        
+        if(inicio != null && pos >= 0){
+         if(pos==0){
+             inicio = act.getSig();
+            result = true;
+         }else{
+           while(contador!=pos && act.getSig()!= null){
             
-            while(contador!=pos && act.getSig()!= null){
-            act = act.getSig();
-            
+                ant = act;
+                act = act.getSig();
+                contador++;
                 
             }
+             
+            if(contador == pos){
+                ant.setSig(act.getSig());
+                result = true;
+         }
+            
+            
+          
+          
+            }
+
+            
         }
         // Borra el nodo de la posicion  indicada
         // regresa true si se elimina exitosamente
         // regresa false si no
-        return false;
+        return result;
+       
     }
     
     
