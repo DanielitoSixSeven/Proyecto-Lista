@@ -105,9 +105,6 @@ public class lista {
         else
             return -1;
         
-        //se envia el posible valor y regresa en que posicion
-        // de la lisata esta
-        // si no encuenta el valor regresara -1
         
     }
    
@@ -122,9 +119,6 @@ public class lista {
                 
                 act = act.getSig();
                 contador++;
-                
-                
-                
             }
             if(contador==pos){
                 act.setValor(newValue);
@@ -137,14 +131,24 @@ public class lista {
             return result;
         
             
-        
-        //asigna nuevo valor en la posicion enviada
-        //regresa true si el cambio es exitoso
-        // regresa false si no puedo hacer el cambio
+     
     }
    
     public boolean Delete(int pos)
     {
+        boolean result = false;
+        int contador=0;
+        nodo act = inicio;
+        nodo ant = inicio;
+        
+        if (inicio!=null){
+            
+            while(contador!=pos && act.getSig()!= null){
+            act = act.getSig();
+            
+                
+            }
+        }
         // Borra el nodo de la posicion  indicada
         // regresa true si se elimina exitosamente
         // regresa false si no

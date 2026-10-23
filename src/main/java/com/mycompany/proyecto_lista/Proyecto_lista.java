@@ -23,7 +23,7 @@ public class Proyecto_lista {
             System.out.println("3. Cambiar nodo");
             System.out.println("4. Encontrar valor de nodo ");
             System.out.println("5. Borrar nodo");
-            System.out.println("6. Imprimir tamaño de lista");
+            System.out.println("6. Imprimir tamano de lista");
             System.out.println("7. Imprimir lista");
             System.out.println("8. Salir");
             System.out.println("Seleccionar una opcion -->");
